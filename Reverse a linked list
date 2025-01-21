@@ -1,0 +1,15 @@
+class Solution {
+    Node reverseList(Node head) {
+        // code here
+        Node curr=head,prev=null,temp=null;
+        
+        while(curr!=null) {
+            
+            temp=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=temp;
+        }
+        return prev;
+    }
+}
